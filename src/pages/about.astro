@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<!-- <Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			> -->
+			<Hero
+				title="A propos"
+				tagline="Expériences professionnelles, diplômes et compétences."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/article-kais-grand.jpg"
+					alt="Nicolas Vyplasil"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Expériences professionnelles</h2>
+				<div class="content">
+					<p>
+						J'ai été militaire, de spécialité informatique dans la Marine Nationale pendant une vingtaine d'années.<br />
+						J'ai eu l'opportunité d'acquérir de nombreuses connaissances : <br />
+						- administrateur de parc informatique (Windows et Linux) <br />
+						- administrateur de base de données (Sybase)  <br />
+						- conception, installation et maintenance d'un site web opérationnel (html, js, php, java) <br />
+						- développeur SAP <br />
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Diplômes</h2>
+				<div class="content">
+					<p>Formation OPENCLASSROOMS "Développeur d'application - JavaScript React". (équivalent bac 3/4) </p>
+					<p>Certificat professionnel de télécommunication à l'école naval de Toulon . (équivalent bac 2) </p>
+					<p>Certificat de programmateur  informatique  à l'école inter-armée des transmissions de Rennes. </p>
+					<p>BAC PRO MAVALEC (maintenance de l'audiovisuelle électronique).</p>
+					<p>BEP Electronique. </p>
+				</div>
+
+				
+			</section>
+			<section>
+				<h2 class="section-title">Compétences</h2>
+				<div class="content">
+					<p>Rigeur, polyvalent, curieux, autonome. </p>
+					<p>Travail en équipe.</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
