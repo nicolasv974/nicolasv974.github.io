@@ -1,12 +1,3 @@
-# PORFOLIO Nicolas Vyplasil
-
-[Ici](https://papaya-axolotl-9a412e.netlify.app)
-
-
-
-
-
-
 # Astro Starter Kit: Portfolio
 
 ```
