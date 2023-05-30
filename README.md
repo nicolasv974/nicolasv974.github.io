@@ -1,4 +1,4 @@
-# Porfolio Nicolas Vyplasil
+# Portfolio Nicolas Vyplasil
 
 [Ici](https://porfolio-astro-two.vercel.app/)
 
