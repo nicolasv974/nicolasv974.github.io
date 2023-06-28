@@ -56,7 +56,7 @@ const projects = (await getCollection('work'))
 					height="620"
 					src="/assets/portrait.jpg"
 				/> -->
-				<img
+				<img 
 					alt="Nicolas Vyplasil"
 					width="240"
 					height="240"
@@ -124,6 +124,11 @@ const projects = (await getCollection('work'))
 </BaseLayout>
 
 <style>
+	.imgProfil:hover{
+	-ms-transform: scale(1.5); /* IE 9 */
+	-webkit-transform: scale(1.5); /* Safari 3-8 */
+	transform: scale(1.05);
+	}
 	.hero {
 		display: flex;
 		flex-direction: column;
