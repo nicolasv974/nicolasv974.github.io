@@ -23,8 +23,40 @@ import Hero from '../components/Hero.astro';
 					alt="Nicolas Vyplasil"
 				/> -->
 
+				<section id="Contact">
+					<!-- <div class="content">
+						<div class="contact">
+							<h3>CONTACT</h3>
+							<p class="contactdescription">Un projet ? N'hésitez pas à m'en faire part en le décrivant en quelques lignes, je me ferais un plaisir de vous accompagner !</p>
+							<form method="post">
+								<input type="text" name="nom"			placeholder="Nom*"		required class="inputname">
+								<input type="text" name="email"			placeholder="Email*"	required class="inputmail">
+								<textarea 		   name="message"		placeholder="Message*"	required class="inputmsg"></textarea>
+								<input type="submit" class="Rectangle-4closed sendmessageclosed" value="Envoyer le message">
+							</form>
+						</div>
+					</div> -->
+					<!-- <form action="mailto:nico.vyp@hotmail.fr" method="post" enctype="text/plain">
+						<label for="name">Nom :</label>
+						<input type="text" id="name" name="name"><br><br>
+						<label for="email">E-mail :</label>
+						<input type="text" id="email" name="email"><br><br>
+						<label for="message">Message :</label><br>
+						<textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+						<input type="submit" value="Envoyer">
+					</form> -->
+					<form name="contact" method="POST" data-netlify="true">
+						<label for="name">Nom :</label>
+						<input type="text" id="name" name="name" required><br><br>
+						<label for="email">E-mail :</label>
+						<input type="email" id="email" name="email" required><br><br>
+						<label for="message">Message :</label><br>
+						<textarea id="message" name="message" rows="12" cols="60" required></textarea><br><br>
+						<button type="submit">Envoyer</button>
+					</form>
+				</section>
 
-				<p>Mon  <a href="mailto:nico.vyp@hotmail.fr">e-mail</a> </p>
+				<!-- <p>Mon  <a href="mailto:nico.vyp@hotmail.fr">e-mail</a> </p> -->
 			</Hero>
 		
 
