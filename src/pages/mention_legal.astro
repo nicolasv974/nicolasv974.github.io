@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Parcours | Nicolas Vyplasil" description="Parcours Nicolas Vyplasil">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<!-- <Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			> -->
+			<!-- <Hero
+				title="Formation continue"
+				tagline="Expériences professionnelles, diplômes et compétences."
+			>
+			</Hero> -->
+
+			<section>
+				<div class="content">
+					<h4>Mentions légales</h4>
+					<br />
+					 <p>En accédant et en naviguant sur ce site <a href="https://porfolioastro-ypiiz.kinsta.page/">https://porfolioastro-ypiiz.kinsta.page/</a>, l'utilisateur est informé de
+					 ses droits et obligations et accepte pleinement de se conformer aux présentes conditions d'utilisations du site.
+					 L'éditeur du site se réserve la possibilité de modifier ces conditions. Il appartient à l'utilisateur de vérifier
+					 périodiquement le contenu des documents concernés. L'éditeur se réserve la possibilité de supprimer ou de modifier
+					 en tout ou partie le « site ».
+					</p>
+					<br/>
+					<h5>EDITEUR ET RESPONSABLE DE PUBLICATION</h5>
+					<br/>
+					<p>Ce blog personnel non déclaré à la CNIL est édité par Vyplasil Nicolas.</p>
+					<br/>
+					<h5>HEBERGEMENT</h5>
+					<br/>
+					<p>Ce site est hébergé par Kinstz Inc.</p>
+					<p>Siége social : 8605 Santa Monica Blvd #92581 West Hollywood, CA 90069</p>
+					<p>Mail : contact@kinsta.com</p>
+					<p>Cet hébergeur détient à ce jour les informations personnelles concernant l'auteur de ce site</p>
+					<br/>
+					<h5>RESPONSABILITES</h5>
+					<br/>
+					<p>L'éditeur du site Vyplasil Nicolas met tout en œuvre pour assurer l'exactitude et la mise à jour de l'ensemble des 
+					informations fournies sur son site.	Il ne peut garantir que les informations contenues sur le site soient
+					complètes, précises, exactes, exhaustives et dépourvues de toute erreur.
+					Vyplasil Nicolas s'engage, dès qu'un utilisateur quelconque transmet toute erreur constatée au mail suivant : vypnicolas@gmail.com, à procéder à la correction dans les plus brefs délais.</p>
+					<br/>
+					<br/>
+					<h5>ACCESSIBILITE</h5>
+					<br/>
+					<p>Le site est par principe accessible aux utilisateurs 24/24h et 7/7j, sauf interruption, programmée ou non, 
+					pour des besoins de maintenance ou en cas de force majeure.	En cas d'indisponibilité d'accès au site, celui-ci s'engage
+					à faire son maximum afin de rétablir l'accès. Le site ne saurait être tenu pour responsable de tout dommage, quelle qu'en soit la nature, résultant de son indisponibilité.</p>
+					<br/>
+
+
+					<!-- <p><a href="https://vyplasildev.wordpress.com/">Lien de la création d'un site web par WordPress</a></p>
+					<br /> -->
+					<!-- <img
+					width="1553"
+					height="873"
+					src="/assets/Site_wordpress.jpg"
+					alt="Site wordpress"
+				/> -->
+				</div>
+			</section>
+		
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
