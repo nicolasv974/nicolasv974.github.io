@@ -1,7 +1,21 @@
 ---
 import Icon from './Icon.astro';
 const currentYear = new Date().getFullYear();
+
+
+/** Main menu items */
+const textLinks: { label: string; href: string }[] = [
+	{ label: 'Mentions légales', href: '/mention_legal' },
+	 { label: 'Politique de confidentialité', href: '/politique_confidentalite/' },
+    // //  { label: 'Formation_continue', href: '/formation/' },
+	// { label: 'Parcours', href: '/about/' },
+	// { label: 'Formation_continue', href: '/formation_continue/' },
+	// { label: 'Contact', href: '/contact/' }
+];
+
+
 ---
+
 
 <footer>
 	<div class="group">
@@ -10,6 +24,28 @@ const currentYear = new Date().getFullYear();
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
 		<p>&copy; {currentYear} Nicolas Vyplasil</p>
+		<ul class="nav-items">
+			{
+				textLinks.map(({ label, href }) => (
+					<li>
+						<a
+							aria-current={Astro.url.pathname === href}
+							class:list={[
+								'link',
+								{
+									active:
+										Astro.url.pathname === href ||
+										(href !== '/' && Astro.url.pathname.startsWith(href)),
+								},
+							]}
+							href={href}
+						>
+							{label}
+						</a>
+					</li>
+				))
+			}
+		</ul>
 	</div>
 	<p class="socials">
 		<a href="https://www.linkedin.com/in/nicolas-vyplasil-2b11b5167/"> Linkedin</a>
