@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Parcours | Nicolas Vyplasil" description="Parcours Nicolas Vyplasil">
+	<div class="stack gap-20">
+		<main>
+			<!-- <Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			> -->
+			<!-- <Hero
+				title="Formation continue"
+				tagline="Expériences professionnelles, diplômes et compétences."
+			>
+			</Hero> -->
+			<br />
+			<p> - Développez des sites web avec Java EE  
+				(<a href="/public/formation/certificat_reussite_developpez_sites_web_java_EE.pdf">certificat de réussite</a>) </p>
+			<p> - Créez une application Java avec Spring Boot
+				(<a href="/public/formation/creez_application_srpint_boot.pdf">attestation de réussite</a>)) </p>
+			<p> - Apprenez à programmer en Java
+					(<a href="/public/formation/appprenez_programmer_java.pdf">certificat de réussite</a>)) </p>
+			<p> - Installez votre environnement de développement Java avec Eclipse
+				(<a href="/public/formation/installer_environnement_java_eclipse.pdf">certificat de réussite</a>)) </p>
+			<br />
+			<p> - Optimisez votre déploiement en créant des conteneurs avec Docker
+				(<a href="/public/formation/optimisez_déploiement_conteneurs_docker.pdf">certificat de réussite</a>)) </p>
+			<br />
+			<p> - Introduction à iOS : plongez dans le développement mobile
+				(<a href="/public/formation/certificat_introduction_a_ios_developpement_mobile.pdf">certificat de réussite</a>)) </p>
+			<br />
+			<p> - Adoptez les API REST pour vos projets web
+				(<a href="/public/formation/certificat_reussite_API_REST.pdf">certificat de réussite</a>)) </p>
+			<br />
+			<p> - Défis et enjeux de la cybersécurité
+				(<a href="/public/formation/attestation_suivi_course-v1_cybersécurité.pdf">attestation de réussite</a>)) </p>
+			<p> - Découvrez l'univers de la cybersécurité
+				(<a href="/public/formation/certificat_nicolas-vyplasil_decouvrez-lunivers-de-la-cybersecurite.pdf">attestation de réussite</a>)) </p>
+			<br />	
+			<p> - Apprendre à coder avec Python
+				(<a href="/public/formation/attestation_suivi_course-v1_apprendre_coder_avec_Python.pdf">attestation de réussite</a>)) </p>
+			<p> - Démarrez votre projet avec Python
+				(<a href="/public/formation/certificat_nicolas-vyplasil_demarrez-votre-projet-avec-python.pdf">attestation de réussite</a>)) </p>
+			<br />
+			<p> - Bases de données relationnelles :	Comprendre pour maîtriser
+				(<a href="/public/formation/attestation_suivi_course-v1_CNAM_bdd_relationnelles_perfectionnement.pdf">attestation de réussite</a>)) </p>
+			<p> - Bases de données relationnelles :	apprendre pour utiliser
+					(<a href="/public/formation/attestation_suivi_course-v1_CNAM_bdd_relationnelles.pdf">attestation de réussite</a>)) </p>
+			<br />
+			<p> - Concevez votre site web avec PHP et MySQL
+				(<a href="/public/formation/site_php_mysql.pdf">certificat de réussite</a>)) </p>
+			<br />
+			<p> - Perfectionnez-vous sur Angular
+				(<a href="/public/formation/Perfectionnez-vous sur Angular">attestation de réussite</a>)) </p>
+			<br />
+			<p> - Passez au Full Stack avec Node.js, Express et MongoDB
+				(<a href="/public/formation/nodeJS_express_mongoDB.pdf">attestation de réussite</a>)) </p>
+			<br />
+			<p> - Créez un site moderne et professionnel avec WordPress 5
+				(<a href="/public/formation/creez_site_WordPress5.pdf">attestation de réussite</a>)) </p>
+			<br />
+			<p> - Maîtriser le shell Bash-
+				(<a href="/public/formation/attestation_suivi_course-v1_maitriser_shell_bash.pdf">attestation de réussite</a>)) </p>
+			<section>
+				
+
+				
+				<!-- <div class="content">
+					<h4>Solution d'hébergement site web</h4>
+					<br />
+					<p>date : novembre 2023</p>
+					<p><a href="https://vyplasildev.wordpress.com/">Lien de la création d'un site web par WordPress</a></p>
+					<br />
+
+					<h4>WordPress 6</h4>
+					<br />
+					<p>date : novembre 2023</p>
+					<p><a href="https://vyplasildev.wordpress.com/">Lien de la création d'un site web par WordPress</a></p>
+					<br />
+					<img
+					width="1553"
+					height="873"
+					src="/assets/Site_wordpress.jpg"
+					alt="Site wordpress"
+				/> -->
+				</div>
+			</section>
+		
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
